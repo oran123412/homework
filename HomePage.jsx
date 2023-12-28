@@ -1,6 +1,8 @@
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import CardComponent from "../../components/CardComponent";
+import ROUTES from "../../routes/ROUTES";
+import { Navigate } from "react-router-dom";
 
 const initialDataFromServer = [
   {
@@ -48,6 +50,7 @@ const handleDeleteCard = (id) => {
 
 const handleEditingCard = (id) => {
   console.log("father:card to edit", id);
+  Navigate(`${ROUTES.EDITCARD}/${id}`);
 };
 const handlePhoneCard = (id) => {
   console.log("father:card to call", id);
